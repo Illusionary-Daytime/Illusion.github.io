@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /*list-style: none;*/
+        }
+        html,body{
+            width: 100%;
+            background: #000;
+        }
+        .solar-system{
+            width: 1300px;
+            height: 1300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .solar-system>div{
+            position: absolute;
+            border: 1px solid #555;
+            border-radius: 50%;
+        }
+        .solar-system .sun{
+            width: 100px;
+            height: 100px;
+            background: url("solar-system/1.png") no-repeat;
+            background-size: 100% 100%;
+            border: none;
+            top: 600px;
+            left: 600px;
+        }
+        .mercury{
+            width: 150px;
+            height: 150px;
+            top: 575px;
+            left: 575px;
+            animation: rotation 2.4s infinite linear;
+        }
+        .mercury::before{
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: -25px;
+            width: 50px;
+            height: 50px;
+            background: url("solar-system/2.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .venus{
+            width: 260px;
+            height: 260px;
+            left: 520px;
+            top: 520px;
+            animation: rotation 6.16s linear infinite;
+        }
+        .venus::before{
+            content: "";
+            position: absolute;
+            top: 100px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: url("solar-system/3.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .earth{
+            width: 370px;
+            height: 370px;
+            left: 465px;
+            top: 465px;
+            animation: rotation 10s linear infinite;
+        }
+        .earth::before{
+            content: "";
+            position: absolute;
+            top: 155px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: url("solar-system/4.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .moon{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 155px;
+            left: -30px;
+            animation: rotation 3s linear infinite;
+        }
+        .moon::before{
+            content: "";
+            position: absolute;
+            top: 27px;
+            left: -1px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: url("solar-system/10.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .mars{
+            width: 480px;
+            height: 480px;
+            left: 410px;
+            top: 410px;
+            animation: rotation 19s linear infinite;
+        }
+        .mars::before{
+            content: "";
+            position: absolute;
+            top: 215px;
+            left: -25px;
+            width: 50px;
+            height: 50px;
+            background: url("solar-system/5.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .jupiter{
+            width: 620px;
+            height: 620px;
+            left: 340px;
+            top: 340px;
+            animation: rotation 118s linear infinite;
+        }
+        .jupiter::before{
+            content: "";
+            position: absolute;
+            top: 270px;
+            left: -40px;
+            width: 80px;
+            height: 80px;
+            background: url("solar-system/6.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .saturn{
+            width: 820px;
+            height: 820px;
+            left: 240px;
+            top: 240px;
+            animation: rotation 295s linear infinite;
+        }
+        .saturn::before{
+            content: "";
+            position: absolute;
+            top: 370px;
+            left: -60px;
+            width: 120px;
+            height: 80px;
+            background: url("solar-system/7.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .uranus{
+            width: 1020px;
+            height: 1020px;
+            top: 140px;
+            left: 140px;
+            animation: rotation 840s linear infinite;
+        }
+        .uranus::before{
+            content: "";
+            position: absolute;
+            top: 470px;
+            left: -40px;
+            width: 80px;
+            height: 80px;
+            background: url("solar-system/8.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .pluto{
+            width: 1190px;
+            height: 1190px;
+            left: 55px;
+            top: 55px;
+            animation: rotation 1648s linear infinite;
+        }
+        .pluto::before{
+            content: "";
+            position: absolute;
+            top: 560px;
+            left: -35px;
+            width: 70px;
+            height: 70px;
+            background: url("solar-system/9.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        @keyframes rotation{
+            /*0%{*/
+                /*transform: rotateZ(0deg);*/
+            /*}*/
+            /*100%{*/
+                /*transform: rotateZ(360deg);*/
+            /*}*/
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="solar-system">
+        <div class='sun'></div>
+        <div class='mercury'></div>
+        <div class='venus'></div>
+        <div class='earth'>
+            <div class="moon"></div>
+        </div>
+        <div class='mars'></div>
+        <div class='jupiter'></div>
+        <div class='saturn'></div>
+        <div class='uranus'></div>
+        <div class='pluto'></div>
+    </div>
+</body>
+</html>
